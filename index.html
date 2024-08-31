@@ -20,7 +20,7 @@
                 <span class="close-button">✖</span>
             </div>
             <div class="window-content">
-                <h1>Congrats On The Autism</h1>
+                <h1 id="rainbowWelcomeText">Congrats On The Autism</h1>
                 <p>A Journey Beyond the Ordinary</p>
             </div>
         </div>
@@ -45,6 +45,39 @@
                     <source src="cota.mov" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+            </div>
+        </div>
+
+        <div class="window" id="memeticsWindow">
+            <div class="title-bar">
+                <span class="title-text">Memetics</span>
+                <span class="close-button">✖</span>
+            </div>
+            <div class="window-content thumbnails">
+                <div class="thumbnail" data-file="cota.mov" data-display="Cota Video">
+                    <img src="cota-thumbnail.png" alt="Cota Video">
+                    <p>Cota Video</p>
+                </div>
+                <div class="thumbnail" data-file="nest.mov" data-display="Nest Video">
+                    <img src="nest-thumbnail.png" alt="Nest Video">
+                    <p>Nest Video</p>
+                </div>
+                <!-- Add more thumbnails as needed -->
+            </div>
+        </div>
+
+        <!-- Media Viewer Window -->
+        <div class="window" id="mediaViewerWindow" style="display: none;">
+            <div class="title-bar">
+                <span class="title-text" id="mediaViewerTitle">Media Viewer</span>
+                <span class="close-button">✖</span>
+            </div>
+            <div class="window-content">
+                <video id="mediaViewerVideo" controls style="display: none;">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Add more media types (e.g., images, GIFs) as needed -->
             </div>
         </div>
 
@@ -78,7 +111,6 @@
                     <img src="icon3.png" alt="Icon 3">
                     <p>Casino</p>
                 </div>
-                <!-- Add more icons as needed -->
             </div>
         </div>
 
@@ -96,7 +128,7 @@
             <div class="menu-options">
                 <p id="openWelcome">Welcome</p>
                 <p id="openAbout">About</p>
-                <p id="openVideo">Play!</p>
+                <p id="openVideo">Memetics</p>
                 <p id="openSocials">Socials</p>
                 <p id="openControlPanel">Control Panel</p>
             </div>
