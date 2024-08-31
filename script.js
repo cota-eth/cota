@@ -45,7 +45,7 @@ document.querySelector('#openAbout').addEventListener('click', () => {
 });
 
 document.querySelector('#openVideo').addEventListener('click', () => {
-    document.querySelector('#videoWindow').style.display = 'block';
+    document.querySelector('#memeticsWindow').style.display = 'block';
 });
 
 document.querySelector('#openSocials').addEventListener('click', () => {
@@ -63,6 +63,33 @@ window.onload = function() {
     videoWindow.style.display = 'block';
     video.play();
 
-    const cotaPopupWindow = document.querySelector('#cotaPopupWindow');
-    cotaPopupWindow.style.display = 'block';
+    // Delay popup by 3 seconds
+    setTimeout(() => {
+        const cotaPopupWindow = document.querySelector('#cotaPopupWindow');
+        cotaPopupWindow.style.display = 'block';
+    }, 3000);
 };
+
+// Handle double-click on thumbnails to open media
+document.querySelectorAll('.thumbnail').forEach(thumbnail => {
+    thumbnail.addEventListener('dblclick', function() {
+        const file = this.getAttribute('data-file');
+        const displayName = this.getAttribute('data-display');
+        const mediaViewerWindow = document.querySelector('#mediaViewerWindow');
+        const mediaViewerVideo = document.querySelector('#mediaViewerVideo');
+        const mediaViewerTitle = document.querySelector('#mediaViewerTitle');
+
+        // Set the title of the media viewer
+        mediaViewerTitle.textContent = displayName;
+
+        // Set the source of the media player based on the file
+        if (file.endsWith('.mov')) {
+            mediaViewerVideo.src = file;
+            mediaViewerVideo.style.display = 'block';
+            mediaViewerVideo.play();
+        }
+
+        // Display the media viewer window
+        mediaViewerWindow.style.display = 'block';
+    });
+});
