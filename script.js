@@ -60,13 +60,13 @@ document.querySelector('#openControlPanel').addEventListener('click', () => {
 window.onload = function() {
     const videoWindow = document.querySelector('#videoWindow');
     const video = document.querySelector('#welcomeVideo');
-    videoWindow.style.display = 'block';
-    video.play();
+    videoWindow.style.display = 'block'; // Open the video window
+    video.play(); // Play the video automatically
 
     // Delay popup by 3 seconds
     setTimeout(() => {
         const cotaPopupWindow = document.querySelector('#cotaPopupWindow');
-        cotaPopupWindow.style.display = 'block';
+        cotaPopupWindow.style.display = 'block'; // Show COTA popup after 3 seconds
     }, 3000);
 };
 
@@ -83,7 +83,7 @@ document.querySelectorAll('.thumbnail').forEach(thumbnail => {
         mediaViewerTitle.textContent = displayName;
 
         // Set the source of the media player based on the file
-        if (file.endsWith('.mov')) {
+        if (file.endsWith('.mp4') || file.endsWith('.mov')) {
             mediaViewerVideo.src = file;
             mediaViewerVideo.style.display = 'block';
             mediaViewerVideo.play();
