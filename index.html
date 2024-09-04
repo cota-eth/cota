@@ -41,7 +41,8 @@
                 <span class="close-button">✖</span>
             </div>
             <div class="window-content">
-                <video id="welcomeVideo" controls>
+                <!-- Autoplay and muted added to ensure autoplay works on load -->
+                <video id="welcomeVideo" autoplay muted preload="auto" controls>
                     <source src="cota.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -120,5 +121,13 @@
     </div>
 
     <script src="script.js"></script>
+
+    <!-- Script to ensure video starts playing on page load -->
+    <script>
+        window.onload = function() {
+            var video = document.getElementById('welcomeVideo');
+            video.play(); // Ensure video starts playing
+        };
+    </script>
 </body>
 </html>
