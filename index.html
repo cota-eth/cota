@@ -31,7 +31,7 @@
                 <span class="close-button">✖</span>
             </div>
             <div class="window-content">
-                <p>$COTA is a fair-launch culture coin deployed on Ethereum</p>
+                <p>$COTA is a fair-launch culture coin on Ethereum</p>
             </div>
         </div>
 
@@ -41,8 +41,7 @@
                 <span class="close-button">✖</span>
             </div>
             <div class="window-content">
-                <!-- Autoplay and muted added to ensure autoplay works on load -->
-                <video id="welcomeVideo" autoplay muted preload="auto" controls>
+                <video id="welcomeVideo" controls>
                     <source src="cota.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -94,6 +93,27 @@
             </div>
         </div>
 
+        <div class="window" id="controlPanelWindow">
+            <div class="title-bar">
+                <span class="title-text">Control Panel</span>
+                <span class="close-button">✖</span>
+            </div>
+            <div class="window-content icons">
+                <div class="icon">
+                    <img src="icon1.png" alt="Icon 1">
+                    <p>Settings</p>
+                </div>
+                <div class="icon">
+                    <img src="icon2.png" alt="Icon 2">
+                    <p>Mouse</p>
+                </div>
+                <div class="icon">
+                    <img src="icon3.png" alt="Icon 3">
+                    <p>LP</p>
+                </div>
+            </div>
+        </div>
+
         <div class="window" id="cotaPopupWindow">
             <div class="title-bar">
                 <span class="title-text">BUY, BUY, BUY!</span>
@@ -107,6 +127,7 @@
         <div class="start-menu-popup hidden">
             <div class="menu-options">
                 <p id="openWelcome">Welcome</p>
+                <p id="openControlPanel">Control Panel</p>
                 <p id="openVideo">Memetics</p>
                 <p id="openSocials">Socials</p>
                 <p id="openAbout">About</p>
@@ -121,13 +142,5 @@
     </div>
 
     <script src="script.js"></script>
-
-    <!-- Script to ensure video starts playing on page load -->
-    <script>
-        window.onload = function() {
-            var video = document.getElementById('welcomeVideo');
-            video.play(); // Ensure video starts playing
-        };
-    </script>
 </body>
 </html>
